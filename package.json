@@ -1,0 +1,15 @@
+{
+  "name": "farmfrndz",
+  "version": "1.0.0",
+  "description": "agri business website",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "harsh sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "webdriverio": "^8.6.3"
+  }
+}

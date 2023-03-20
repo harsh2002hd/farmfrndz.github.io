@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Weather API</title>
+
+    <!-- to be in a script.js -->
+    <script type="text/javascript">
+
+        // Awesome javascript way :-) 
+        function create_request() {
+            var city = $("input").val();
+            var API_URL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +
+                "&units=imperial&appid=e83b3c4c08285bf87b99f9bbc0abe3f0";
+            $.get(API_URL, deliver);
+        }
+
+        function deliver(response) {
+            var result = "<h4>" + response.name + "</h4>" +
+                "<ul>" +
+                "<li> temperature: " + response.main.temp + " F </li>" +
+                "<li> humidity: " + response.main.humidity + "% </li>" +
+                "<li> wind speed: " + response.wind.speed + " mph</li>" +
+                "</ul>";
+            $(".result").html(result);
+        }
+
+        // jQuery equivalent to <button onclick="create_request()"> ... 
+        /*$(document).ready(function() {
+            $("button").on("click", create_request);
+        });*/
+
+        // BORING jQuery way :-(
+        /*$(document).ready(function() {
+            $("button").on("click", function(event) {
+
+                var city = $("input").val();
+                var API_URL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +
+                    "&units=imperial&appid=e83b3c4c08285bf87b99f9bbc0abe3f0";
+
+                $.get(API_URL, function(response) {
+                    var result = "<h4>" + response.name + "</h4>" +
+                        "<ul>" +
+                        "<li> temperature: " + response.main.temp + " F </li>" +
+                        "<li> humidity: " + response.main.humidity + "% </li>" +
+                        "<li> wind speed: " + response.wind.speed + "MPH </li>" +
+                        "</ul>";
+                    $(".result").html(result);
+                });
+            });
+        });*/
+    </script>
+</head>
+
+<body>
+    This site uses the
+    <h1>Open Weather Map <a href="https://openweathermap.org/current">API</a></h1>
+    <h3>The Current Weather in</h3>
+    <div class="result"></div>
+    <input type="text" placeholder="City">
+    <button onclick="create_request()">Check Weather</button>
+
+</body>
+
+</html>

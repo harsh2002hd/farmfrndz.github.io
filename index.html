@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmFrndz</title>
+</head>
+<body>
+ <div class="flex justify-center ">
+        <nav class="self-center w-full max-w-7xl  ">
+            <div class="flex flex-col lg:flex-row justify-around items-center border-b-2">
+                <h1 class="uppercase pl-5 py-4 text-xl font-sans font-bold">FarmFrndz</h1>
+                <ul class="hidden lg:flex items-center text-[18px] font-semibold pl-32">
+                    <li class="hover:underline  underline-offset-4 decoration-2 decoration-black py-2 rounded-lg px-5">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-black py-2 rounded-lg px-5"><a
+                            href="contact.html">Contact</a></li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-black py-2 rounded-lg px-5"><a
+                            href="services.html">Services</a></li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-black py-2 rounded-lg px-5"><a
+                            href="about.html">About</a></li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-black py-2 rounded-lg px-5"><a
+                            href="#">Pricing</a></li>
+                </ul>
+                <div class=" text-center text-base pr-5  inline-flex"> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[6px] hover:text-blue-500"><i
+                            class="fa fa-twitter"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-instagram"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-facebook"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-google"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-linkedin"></i></a> </div>
+            </div>
+        </nav>
+    </div>
+       <br>
+    <div class="flex justify-center  ">
+        <div class="flex flex-col items-center justify-center">
+
+            <div class="flex flex-col  max-w-7xl justify-center items-center space-y-3 w-full ">
+                <div class="flex flex-col   md:items-start items-center justify-center  space-y-3 px-8 text-center ">
+                    <div class="text-3xl md:text-7xl font-bold ">
+                        WELCOME TO FARMFRNDZ </div>
+                </div>
+                <div
+                    class="flex flex-col lg:flex-row space-x-2 space-y-3 md:space-x-6   w-full items-center justify-center ">
+
+                    <div class="lg:w-40 w-64 h-40  overflow-hidden rounded-xl ">
+                        <img src="https://source.unsplash.com/random/300x500/?farm
+
+                        " alt="" class="" />
+                    </div>
+                    <div class="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center">
+                        <div class="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
+                            <img src="https://source.unsplash.com/random/300x500/?farm
+
+                            " alt="" class="" />
+                        </div>
+                        <div class="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
+                            <img src="https://source.unsplash.com/random/300x500/?farm
+
+                            " alt="" class="" />
+                        </div>
+                    </div>
+                    <div class="lg:w-60 w-64 h-96  overflow-hidden rounded-xl ">
+                        <img src="https://source.unsplash.com/random/300x500/?farm
+
+                        " alt="" class="" />
+                    </div>
+                    <div class="flex flex-row lg:flex-col space-x-3 space-y-6 items-center justify-center ">
+                        <div class="w-32 lg:w-40 h-48  overflow-hidden rounded-xl ">
+                            <img src="https://source.unsplash.com/random/300x500/?farm
+
+                            " alt="" class="" />
+                        </div>
+                        <div class="w-32 lg:w-40 h-32  overflow-hidden rounded-xl ">
+                            <img src="https://source.unsplash.com/random/300x500/?farm
+
+                            " alt="" class="" />
+                        </div>
+                    </div>
+                    <div class="lg:w-40 w-64 h-40  overflow-hidden rounded-xl ">
+                        <img src="https://source.unsplash.com/random/300x500/?farm
+
+                        " alt="" class="" />
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div> 
+    <br>
+    <hr>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <div class="flex flex-col  max-w-7xl justify-center items-center space-y-3 w-full ">
+        <div class="flex flex-col   md:items-start items-center justify-center  space-y-3 px-8 text-center ">
+            <div class="text-3xl md:text-7xl font-bold ">
+                FARMFRNDZ WEATHER REPORT </div>
+
+    <script type="text/javascript">
+
+        // Awesome javascript way :-) 
+        function create_request() {
+            var city = $("input").val();
+            var API_URL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +
+                "&units=imperial&appid=e83b3c4c08285bf87b99f9bbc0abe3f0";
+            $.get(API_URL, deliver);
+        }
+
+        function deliver(response) {
+            var result = "<h4>" + response.name + "</h4>" +
+                "<ul>" +
+                "<li> temperature: " + response.main.temp + " F </li>" +
+                "<li> humidity: " + response.main.humidity + "% </li>" +
+                "<li> wind speed: " + response.wind.speed + " mph</li>" +
+                "</ul>";
+            $(".result").html(result);
+        }
+    </script>
+
+    <h1 style="font-weight: bolder;font-size:larger;color:black;">Weather Map <a href="https://openweathermap.org/current">API</a></h1>
+    <h3>The Current Weather in</h3>
+    <div class="result"></div>
+    <input type="text" placeholder="City" style="color: black;">
+    <button onclick="create_request()">Check Weather</button>
+        
+          
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+    <hr>
+    <div class="flex justify-center items-center">
+        <div class="bg-white items-center w-full md:max-w-7xl">
+            <div
+                class="flex flex-col justify-center items-center mt-3 space-y-2 md:mx-[50px] md:flex-row md:justify-between">
+                <p class="text-md font-semibold text-gray-800 md:text-lg md:text-gray-500/90"> Join Our Newsletter </p>
+                <div class="md:text-lg"> <input
+                        class="bg-gray-200/70 border drop-shadow-sm shadow-gray-700 rounded-md placeholder-slate-400 px-2 py-1 focus:outline-none focus:border-cyan-600"
+                        type="email" placeholder="E-mail Address" /> <button
+                        class="p-1 m-1 rounded-md text-white bg-blue-500 hover:text-blue-500 hover:bg-white hover:font-semibold hover:trandform ease-in-out duration-300">
+                        Subscribe </button> </div>
+                <div class="text-center text-lg md:space-x-1"> <a
+                        class="w-9 h-10 pt-1 m-2 md:ml-2 md:mr-0 inline-block border-1 rounded-lg text-white bg-blue-500 hover:bg-white hover:text-blue-500"
+                        href="#">
+                        <li class="fa fa-twitter"></li>
+                    </a> <a
+                        class="w-9 h-10 pt-1 m-2 inline-block border-1 rounded-lg text-white bg-orange-500 hover:bg-white hover:text-orange-500"
+                        href="#">
+                        <li class="fa fa-google"></li>
+                    </a> <a
+                        class="w-9 h-10 pt-1 m-2 inline-block border-1 rounded-lg text-white bg-red-500 hover:bg-white hover:text-red-500"
+                        href="#">
+                        <li class="fa fa-linkedin"></li>
+                    </a> <a
+                        class="w-9 h-10 pt-[5px] m-2 inline-block border-1 rounded-lg text-white bg-purple-500 hover:bg-white hover:text-purple-500"
+                        href="#">
+                        <li class="fa fa-telegram"></li>
+                    </a> <a
+                        class="w-9 h-10 pt-[5px] m-2 inline-block border-1 rounded-lg text-white bg-cyan-500 hover:bg-white hover:text-cyan-500"
+                        href="#">
+                        <li class="fa fa-facebook"></li>
+                    </a> </div>
+            </div>
+            <hr class="mt-2 md:overflow-hidden" />
+            <div class="grid grid-cols-2 my-3 text-center md:grid-cols-4">
+                <div class="flex flex-col leading-7 items-start ml-20">
+                    <h1 class="text-blue-500 text-lg font-semibold">Product</h1>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Features</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Integrations</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Shopify Integrations</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Pricing</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Chrome Extensions</a> </p>
+                </div>
+                <div class="flex flex-col leading-7">
+                    <h1 class="text-blue-500 text-lg font-semibold">Company</h1>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Terms</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Customers</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Blog</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Terms of Servics</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Privacy Policy</a> </p>
+                </div>
+                <div class="flex flex-col my-6 leading-7 md:my-0">
+                    <h1 class="text-blue-500 text-lg font-semibold">Support</h1>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Community</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Support Customers</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Documentations</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Service Providers</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Email Contact</a> </p>
+                </div>
+                <div class="flex flex-col my-6 leading-7 md:my-0">
+                    <h1 class="text-blue-500 text-lg font-semibold">Contact Us</h1>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">Support@admin.com</a> </p>
+                    <p> <a class="text-gray-500/80 hover:text-cyan-600" href="#">(+91)700-788-67-00</a> </p>
+                </div>
+            </div>
+            <hr class="mt-2 md:invisible" />
+                <div class="mt-4 text-gray-500 font-semibold"> <a class="hover:text-blue-500 tracking-wide" href="#">Copyright © by FarmFrndz.in
+                    </a> <strong>|</strong> <a class="hover:text-blue-500 tracking-normal" href="#">Created by HARSH SHARMA</a>
+                </div>
+            </div>
+        </div>
+        </div>
+            
+</body>
+</html>
